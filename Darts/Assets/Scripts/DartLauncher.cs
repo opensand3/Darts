@@ -24,15 +24,15 @@ public class DartLauncher : MonoBehaviour
 
     void Update()
     {
-        if (Input.touchCount == 0)
-        {
-            return;
-        }
+        //if (Input.touchCount == 0)
+        //{
+        //    return;
+        //}
 
-        Touch touch = Input.GetTouch(0);
+        //Touch touch = Input.GetTouch(0);
 
         // controls
-        if (currentlyLoadedDart != null && touch.phase == TouchPhase.Began)
+        if (currentlyLoadedDart != null && Input.GetButtonDown("Fire1"))
         {
             currentlyLoadedDart.Fire();
             currentlyLoadedDart = null;
